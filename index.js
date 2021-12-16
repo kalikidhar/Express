@@ -33,7 +33,7 @@ app.get('/api/users/:id',(req,resp)=>{
     }
     else
     {
-        resp.status(400).json({error_message:`No user found with the id ${req.params.id}`})
+        resp.status(400).json({error_message:`No user found with the given id ${req.params.id}`})
     }
 })
 
