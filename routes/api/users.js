@@ -49,7 +49,8 @@ router.post('/',(req,resp) => {
     }
 
     arr.push(new_user)
-    resp.json(arr)
+    //resp.json(arr)
+    resp.redirect('/')
 })
 
 //Updating user details -> put req

@@ -3,6 +3,7 @@ const express=require('express')
 
 
 const app = express()
+const arr = require("./users_data")
 
 const {engine} = require('express-handlebars')
 
@@ -15,7 +16,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 
-app.get('/',(req,resp) => resp.render('index'))
+app.get('/',(req,resp) => resp.render('index',{
+    title:'My User App',
+    users:arr
+}))
 
 
 //set public to static
